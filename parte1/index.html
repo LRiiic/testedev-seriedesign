@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="">
 		<link rel="stylesheet" href="css/style.css">
-		<script src="js/script.js" type="text/javascript"></script>
+		<script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
 		<link rel="stylesheet" href="js/owlcarousel/dist/assets/owl.carousel.min.css">
 		<link rel="stylesheet" href="js/owlcarousel/dist/assets/owl.theme.default.min.css">
 	</head>
@@ -17,36 +17,44 @@
 	<body>
 		<header id="main-header-mobile">
 			<div class="top-header">
-				<div class="menu-open-button">
-					<button>
-						<img id="menu-open-icon" src="./img/icons/menu.png" alt="Botão abrir menu"/>
-					</button>
-				</div>
+				<button id="open-menu" class="menu-open-button" name="button" onclick="openButton()">
+					<img src="./img/icons/menu.png" alt="Menu"/>
+				</button>
 				<div class="menu-mobile">
-					<nav class="main-nav">
-						<button class="menu-close-button" name="button">X</button>
-						<ul>
-							<li>Categoria 1</li>
-							<li>Categoria 2</li>
-							<li>Categoria 3</li>
-							<li>Categoria 4</li>
-							<li>Categoria 5</li>
-							<li>Categoria 6</li>
-							<li>Categoria 7</li>
-						</ul>
-					</nav>
-
-					<div class="account-content">
-						<figure>
-							<img id="icon-login" src="./img/icons/login.png" alt="Fazer login"/>
-						</figure>
-						<div>
-							<p>Criar uma conta</p>
-						</div>
-						<div>
-							<p>Iniciar sessão</p>
+					<div class="menuToggle">
+						<div id="menu">
+							<button id="close-menu" class="menu-close-button" name="button" onclick="closeButton()">
+								<img src="./img/icons/close.png" alt="Menu"/>
+							</button>
+							<nav class="main-nav">
+								<ul>
+									<li>Categoria 1</li>
+									<li>Categoria 2</li>
+									<li>Categoria 3</li>
+									<li>Categoria 4</li>
+									<li>Categoria 5</li>
+									<li>Categoria 6</li>
+									<li>Categoria 7</li>
+								</ul>
+								<div class="background-menu"></div>
+							</nav>
+		
+							<div class="account-content">
+								<figure>
+									<img id="icon-login" src="./img/icons/login.png" alt="Fazer login"/>
+								</figure>
+								<div>
+									<p>Criar uma conta</p>
+								</div>
+								<div>
+									<p>Iniciar sessão</p>
+								</div>
+							</div>
 						</div>
 					</div>
+
+
+
 				</div>
 
 				<div class="logo-header-content">
@@ -68,11 +76,13 @@
 			</div>
 		</header>
 
-
 		<header id="main-header">
 			<div id="top-header">
-				<div>
+				<div class="search-content">
 					<input type="search" id="main-search" placeholder="Pesquisar...">
+					<button>
+						<img id="lupa" src="./img/icons/lupa.png"/>
+					</button>
 				</div>
 				<div>
 					<figure>
@@ -94,15 +104,24 @@
 			</div>
 			<div id="bottom-header" class="bg-purple">
 				<nav id="main-nav">
-					<ul>
-						<li>Categoria 1</li>
-						<li>Categoria 2</li>
-						<li>Categoria 3</li>
-						<li>Categoria 4</li>
-						<li>Categoria 5</li>
-						<li>Categoria 6</li>
-						<li>Categoria 7</li>
-					</ul>
+					<a href="#categoria1">Categoria 1</a>
+					<div class="dropdown">
+						<button class="dropbtn">Categoria 2 
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="#">Subcategoria lorem</a>
+							<a href="#">Subcategoria</a>
+							<a href="#">Subcategoria lorem ipsum</a>
+							<a href="#">Subcategoria lorem</a>
+							<a href="#">Subcategoria</a>
+						</div>
+					</div> 
+					<a href="#categoria3">Categoria 3</a>
+					<a href="#categoria4">Categoria 4</a>
+					<a href="#categoria5">Categoria 5</a>
+					<a href="#categoria6">Categoria 6</a>
+					<a href="#categoria7">Categoria 7</a>
 				</nav>
 			</div>
 		</header>
@@ -405,6 +424,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section class="newsletter bg-purple py-1">
 				<div class="section-title center-sec py-1 flex-column">
 					<h1 class="color-white">Assine nossa newsletter</h1>
@@ -500,6 +520,7 @@
 	</body>
 
 	<script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
+	<script src="js/script.js" type="text/javascript"></script>
 	<script src="js/owlcarousel/dist/owl.carousel.min.js"></script>
 	<script>
 		$(document).ready(function(){
@@ -514,6 +535,7 @@
 			});
 		});
 	</script>
+
 </html>
 
 
