@@ -50,6 +50,38 @@
     color: #7f7f7f;
 }
 
+/* FIXED BUTTONS */
+.fixed-buttons {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+}
+
+.fixed-buttons .gotoTop {
+    cursor: pointer;
+    position: absolute;
+    bottom: 56px;
+    right: 0;
+    transition: .2s;
+}
+
+.fixed-buttons .gotoTop:hover,
+.fixed-buttons .whatsapp:hover {
+    transform: scale(0.90);
+}
+
+.fixed-buttons .whatsapp { 
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: .2s;
+}
+/* FIXED BUTTONS END */
+
+/* 
+
 /* CAROUSEL */
 .owl-carousel {
     display: flex;
@@ -682,7 +714,22 @@
     #header-settings #profile,
     #header-settings #cart {
         margin: 10px;
-    
+        position: relative;
+    }
+
+    #header-settings #cart span {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: #ffa200;
+        border-radius: 15px;
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        font-weight: 700;
+        padding: 1px;   
+        top: -5px; 
+        right: -5px; 
     }
     
     #main-nav {
